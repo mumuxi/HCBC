@@ -1,0 +1,40 @@
+name		countOfObject	countOfAttribute	countOfClass	density
+balance:	625		23		3		0.21739130434782608		2106
+car:		1728	25		4		0.28					12640
+zoo:		101		28		7		0.3048090523338048		379
+hayes:		160		18		3		0.2777777777777778		451
+tic-toc		958		29		2		0.3448275862068966		59505
+spect(22):	267		24		2		0.32724719101123595		21641
+monk:		432		19		2		0.3684210526315789		4465，5429, 3961
+iris		150		35		3
+wine		178		91		3
+glass		214		50		7
+haberman	306		24		2
+
+chess		28056	66		18		0.10606060606060606		166245
+nursery		12960	27		3		0.2962962962962963		115201
+splice		3190	290		3		0.2103448275862069		
+测试方法：
+startTestConImObj:包含了对象及属性的概念节点支持度计数，同时构造了相似比较概念。
+startTest：包含了属性及对象的形式背景支持度计数。
+startTestConIm：仅仅包好了属性的概念节点支持度计数。
+
+相似度函数：
+computeSim(int[], Map<Integer, List<Concept>>, int, int[]): 最早的，不用
+computeSimMod(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：上一个的改进，利用形式背景计数（动态，即根据当前形势背景计算）
+computeSimConIm(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：陈礼蓉的方法
+computeSimConImPaper(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：论文中之包含属性部分的方法
+computeSimConImPaperObj(Concept, Map<Integer, List<Concept>>, int, int, int[], int[])：论文中相似度模型
+computeSimConImPaperObj2(Concept, Map<Integer, List<Concept>>, int, int, int[], int[])：上述的改进，只匹配包含有solution属性的概念
+computeSimilarity(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：属性位置权重及在形式背景中权重
+computeSimilarityDeep(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：属性位置权重及在形式背景中权重（深度优先方法）
+computeSimilarityMod(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：属性位置权重及在概念格中权重
+computeSimilarityModOnly(Vector<Integer>, Map<Integer, List<Concept>>, int, int[])：上述的测试改进
+
+
+
+
+
+
+
+
